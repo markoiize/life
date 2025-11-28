@@ -7684,6 +7684,7 @@
         addReputation(amount) {
             const oldRep = zherxesReputation;
             zherxesReputation = Math.min(REPUTATION_MAX, Math.max(REPUTATION_MIN, zherxesReputation + amount));
+            saveReputation();
             updateReputationDisplay();
             console.log(`Reputation: ${oldRep} → ${zherxesReputation} (+${amount})`);
 
